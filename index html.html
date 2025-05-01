@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<style>
+ 			.warn {
+ 				background-color: purple;
+ 			}
+ 		</style>
+ 	</head>
+ 	<body>
+ 		<h1 style="text-align: center">Masukkan Nama Kamu!</h1>
+ 		<div class="box">
+ 		<label>Masukkan nama: </label>
+ 		<input type="text" id="namaUser">
+ 		<br>
+ 		<label>Masukkan warna yang kalian suka : </label>
+ 		<input type="color" id="bgColor">
+ 		<br>
+         <button onclick="
+ 		if(document.getElementById('namaUser').value == '' || document.getElementById('namaUser').value.length < 3) {
+ 		document.getElementById('outputNama').innerHTML = '<h1> kayaknya kamu yang salah masukkin data nya  coba lagi ya bener!</h1>';
+ 		document.getElementById('outputNama').classList.add('warn');
+ 		
+ 		} else 
+ 		document.getElementById('outputNama').classList.remove('warn');
+ 		document.getElementById('outputNama').innerHTML = '<h2>Halooo ' + document.getElementById('namaUser').value + ', selamat datang!</h2>';
+         document.getElementById('outputNama').style.backgroundColor = document.getElementById('bgColor').value;
+ 			if (document.getElementById('bgColor').value == '#000000') {document.getElementById('warnBlackBg').innerHTML = 'Hmm, tulisannya ga keliatan karena warna latar belakangnya (warna) hitam tuh, coba deh ganti warnanya!'} else {document.getElementById('warnBlackBg').innerHTML = ''}
+ 		">Enter</button>
+        <br>
+        <p id="outputNama">Nihhhh, kalau kamu sudah masukkan nama, warna, dan sudah klik "Enter", nama dan warna kamu bakal keluar dan tampil di sini...</p>
+        <p id="warnBlackBg"></p>
+
+    </body>
+</html>
+</html>
